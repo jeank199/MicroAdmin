@@ -30,7 +30,7 @@
     fclose($file);
 
     try{
-        $statement = "INSERT INTO Producto (Codigo, Nombre, PrecioUnidad, CostoManufacturaUnidad, URLImagen) VALUES (?, ?, ?, ?, ?)");
+        $statement = "INSERT INTO Producto (Codigo, Nombre, PrecioUnidad, CostoManufacturaUnidad, URLImagen) VALUES (?, ?, ?, ?, ?)";
         mysqli_stmt_bind_param($statement,'ssdds', $codigo, $nombre, $preciounidad, $costomanufactura, $path);
         $result = mysqli_stmt_execute($statement);
 
